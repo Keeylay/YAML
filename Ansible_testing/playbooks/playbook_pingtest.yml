@@ -1,0 +1,6 @@
+-
+  name: Test connectivity of ansible to slave servers
+  hosts: all
+  tasks:
+    - name: Ping Test
+      ping: 

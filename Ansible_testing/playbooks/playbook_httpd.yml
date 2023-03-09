@@ -1,0 +1,14 @@
+# Az DevOps install-services.yml
+
+---
+  - hosts: all
+    become: true
+    tasks:
+      - name: Install services
+        sudo:
+          name: 
+            - httpd
+            - php
+          state: present
+      - name: Ensure apache starts
+        service: name-httpd state=started enabled=yes
